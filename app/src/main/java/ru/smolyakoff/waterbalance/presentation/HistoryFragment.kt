@@ -1,13 +1,13 @@
 package ru.smolyakoff.waterbalance.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import ru.smolyakoff.waterbalance.R
 
-class ProfileFragment : Fragment() {
+class HistoryFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +15,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_history, container, false)
     }
 
 

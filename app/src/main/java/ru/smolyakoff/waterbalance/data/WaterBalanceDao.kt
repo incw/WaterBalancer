@@ -28,7 +28,7 @@ interface WaterBalanceDao {
     @Query("SELECT * FROM user_table")
     fun getUserList(): LiveData<List<UserItemDbModel>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun addUser(userItemDbModel: UserItemDbModel)
 
     @Query("DELETE FROM user_table WHERE id=:userItemId")

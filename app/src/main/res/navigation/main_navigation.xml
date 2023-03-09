@@ -2,48 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_navigation"
-    app:startDestination="@id/welcomeFragment">
+    android:id="@+id/main_navigation">
 
-    <fragment
-        android:id="@+id/welcomeFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.WelcomeFragment"
-        android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
-        <action
-            android:id="@+id/action_welcomeFragment_to_personalDataFragment"
-            app:destination="@id/personalDataFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/personalDataFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.PersonalDataFragment"
-        android:label="fragment_personal_data"
-        tools:layout="@layout/fragment_personal_data" >
-        <action
-            android:id="@+id/action_personalDataFragment_to_statsWaterFragment"
-            app:destination="@id/statsWaterFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/statsWaterFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.StatsWaterFragment"
-        android:label="fragment_stats_water"
-        tools:layout="@layout/fragment_stats_water" >
-        <action
-            android:id="@+id/action_statsWaterFragment_to_chooseWaterFragment"
-            app:destination="@id/chooseWaterFragment" />
-    </fragment>
     <fragment
         android:id="@+id/chooseWaterFragment"
         android:name="ru.smolyakoff.waterbalance.presentation.ChooseWaterFragment"
         android:label="fragment_choose_water"
-        tools:layout="@layout/fragment_choose_water" >
-        <action
-            android:id="@+id/action_chooseWaterFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_choose_water" />
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/historyFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
