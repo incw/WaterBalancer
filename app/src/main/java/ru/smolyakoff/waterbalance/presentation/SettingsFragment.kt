@@ -5,32 +5,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.smolyakoff.waterbalance.databinding.FragmentChooseWaterBinding
+import ru.smolyakoff.waterbalance.databinding.FragmentSettingsBinding
 
+class SettingsFragment : Fragment() {
 
-class ChooseWaterFragment : Fragment() {
-
-
-    private var _binding: FragmentChooseWaterBinding? = null
-    private val binding: FragmentChooseWaterBinding
-        get() = _binding ?: throw RuntimeException("FragmentChooseWaterBinding is null")
+    private var _binding: FragmentSettingsBinding? = null
+    private val binding: FragmentSettingsBinding
+        get() = _binding ?: throw RuntimeException("FragmentSettingsBinding")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentChooseWaterBinding.inflate(layoutInflater,container,false)
+        _binding = FragmentSettingsBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -4,14 +4,20 @@
 
     <item
         android:title="@string/water"
-        android:id="@+id/menu_water"
+        android:id="@+id/chooseWaterFragment"
         android:icon="@drawable/baseline_local_drink_24"
         />
 
     <item
         android:title="@string/history"
-        android:id="@+id/menu_history"
+        android:id="@+id/historyFragment2"
         android:icon="@drawable/baseline_history_24"
         />
+    <item
+        android:title="@string/settings"
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/baseline_settings_24"
+        />
+
 
 </menu>

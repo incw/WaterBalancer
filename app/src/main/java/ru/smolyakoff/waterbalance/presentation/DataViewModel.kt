@@ -11,7 +11,7 @@ import ru.smolyakoff.waterbalance.domain.user.AddUserUserCase
 import ru.smolyakoff.waterbalance.domain.user.GetUserUseCase
 import ru.smolyakoff.waterbalance.domain.user.UserItem
 
-class MainViewModel(
+class DataViewModel(
     application: Application
 ) : AndroidViewModel(application) {
 

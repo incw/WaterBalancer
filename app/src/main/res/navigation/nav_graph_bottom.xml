@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_bottom"
+    app:startDestination="@id/chooseWaterFragment">
+
+    <fragment
+        android:id="@+id/historyFragment2"
+        android:name="ru.smolyakoff.waterbalance.presentation.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/chooseWaterFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.ChooseWaterFragment"
+        android:label="fragment_choose_water"
+        tools:layout="@layout/fragment_choose_water" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

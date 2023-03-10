@@ -4,15 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/chooseWaterFragment2">
+    app:startDestination="@id/dataFragment">
     <fragment
-        android:id="@+id/chooseWaterFragment2"
-        android:name="ru.smolyakoff.waterbalance.presentation.ChooseWaterFragment"
-        android:label="fragment_choose_water"
-        tools:layout="@layout/fragment_choose_water" />
+        android:id="@+id/dataFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.DataFragment"
+        android:label="DataFragment" >
+        <action
+            android:id="@+id/action_dataFragment2_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
     <fragment
-        android:id="@+id/historyFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.HistoryFragment"
-        android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        android:id="@+id/mainFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.ContainerFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_container" />
 </navigation>
