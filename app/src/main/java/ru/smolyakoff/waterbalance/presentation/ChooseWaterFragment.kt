@@ -27,4 +27,5 @@ class ChooseWaterFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

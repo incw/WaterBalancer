@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_navigation">
-
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/chooseWaterFragment2">
     <fragment
-        android:id="@+id/chooseWaterFragment"
+        android:id="@+id/chooseWaterFragment2"
         android:name="ru.smolyakoff.waterbalance.presentation.ChooseWaterFragment"
         android:label="fragment_choose_water"
         tools:layout="@layout/fragment_choose_water" />
