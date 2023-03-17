@@ -19,7 +19,7 @@ class WBMapper {
         name = waterItemDbModel.name
     )
 
-    fun mapListDbModelToListWater(list:List<WaterItemDbModel>) = list.map {
+    fun mapListDbModelToListWater(list: List<WaterItemDbModel>) = list.map {
         mapDbModelToWater(it)
     }
 
@@ -39,7 +39,7 @@ class WBMapper {
         weight = userItemDbModel.weight
     )
 
-    fun mapListDbModelToUserList(list:List<UserItemDbModel>) = list.map {
+    fun mapListDbModelToUserList(list: List<UserItemDbModel>) = list.map {
         mapDbModelToUser(it)
     }
 }

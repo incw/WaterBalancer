@@ -33,7 +33,7 @@ class RepositoryImpl(
 
     override fun getUserList(): LiveData<List<UserItem>> = Transformations.map(
         waterBalanceDao.getUserList()
-    ){
+    ) {
         mappers.mapListDbModelToUserList(it)
     }
 
@@ -54,7 +54,7 @@ class RepositoryImpl(
 
     override fun getWaterList(): LiveData<List<WaterItem>> = Transformations.map(
         waterBalanceDao.getWaterList()
-    ){
+    ) {
         mappers.mapListDbModelToListWater(it)
     }
 

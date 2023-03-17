@@ -21,20 +21,20 @@ interface WaterBalanceDao {
     suspend fun deleteWater(waterItemId: Int)
 
     @Query("SELECT * FROM water_table WHERE id=:waterItemId LIMIT 1")
-    suspend fun getWater(waterItemId: Int):WaterItemDbModel
+    suspend fun getWater(waterItemId: Int): WaterItemDbModel
 
     // interface for user
 
     @Query("SELECT * FROM user_table")
     fun getUserList(): LiveData<List<UserItemDbModel>>
 
-    @Insert(onConflict = OnConflictStrategy.ABORT)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addUser(userItemDbModel: UserItemDbModel)
 
     @Query("DELETE FROM user_table WHERE id=:userItemId")
-    suspend fun deleteUser(userItemId:Int)
+    suspend fun deleteUser(userItemId: Int)
 
     @Query("SELECT * FROM user_table WHERE id=:userItemId LIMIT 1")
-    suspend fun getUser(userItemId: Int):UserItemDbModel
+    suspend fun getUser(userItemId: Int): UserItemDbModel
 
 }

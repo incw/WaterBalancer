@@ -13,5 +13,6 @@
     <string name="water">Water</string>
     <string name="history">History</string>
     <string name="settings">Settings</string>
+    <string name="name_user">Name</string>
 
 </resources>

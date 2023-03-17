@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import ru.smolyakoff.waterbalance.R
 import ru.smolyakoff.waterbalance.databinding.FragmentDataBinding
+import ru.smolyakoff.waterbalance.domain.user.UserItem
 
 class DataFragment : Fragment() {
 
@@ -18,6 +19,7 @@ class DataFragment : Fragment() {
     private val binding: FragmentDataBinding
         get() = _binding ?: throw RuntimeException("FragmentDataBinding is null")
 
+    private var userItemId: Int = UserItem.USER_ID
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -16,8 +16,8 @@ class HistoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
-        _binding = FragmentHistoryBinding.inflate(layoutInflater,container,false)
+    ): View {
+        _binding = FragmentHistoryBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 

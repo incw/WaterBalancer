@@ -4,7 +4,7 @@ import ru.smolyakoff.waterbalance.domain.other.WaterBalanceRepository
 
 class AddWaterUseCase(private val waterBalanceRepository: WaterBalanceRepository) {
 
-    suspend fun addWater(waterItem: WaterItem){
+    suspend fun addWater(waterItem: WaterItem) {
         waterBalanceRepository.addWater(waterItem)
     }
 

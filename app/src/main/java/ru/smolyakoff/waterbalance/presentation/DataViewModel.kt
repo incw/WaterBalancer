@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ru.smolyakoff.waterbalance.data.RepositoryImpl
 import ru.smolyakoff.waterbalance.domain.user.AddUserUserCase
+import ru.smolyakoff.waterbalance.domain.user.GetUserListUseCase
 import ru.smolyakoff.waterbalance.domain.user.GetUserUseCase
 import ru.smolyakoff.waterbalance.domain.user.UserItem
 
@@ -17,13 +18,16 @@ class DataViewModel(
 
     private val repository = RepositoryImpl(application)
 
+
     private val getUserUseCase = GetUserUseCase(repository)
     private val addUserUseCase = AddUserUserCase(repository)
+    private val getUserListUseCase = GetUserListUseCase(repository)
 
     private val _userItem = MutableLiveData<UserItem>()
     val userItem: LiveData<UserItem>
         get() = _userItem
 
+    val userList = getUserListUseCase.getUserList()
 
     fun getUser(userItemId: Int) {
         viewModelScope.launch {
@@ -33,7 +37,6 @@ class DataViewModel(
     }
 
     fun addUser(insertName: String, insertHeight: Int, insertWeight: Int) {
-
         viewModelScope.launch {
             val userItem = UserItem(
                 insertName,
@@ -43,5 +46,4 @@ class DataViewModel(
             addUserUseCase.addUser(userItem)
         }
     }
-
 }

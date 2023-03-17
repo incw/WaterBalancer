@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [UserItemDbModel::class,WaterItemDbModel::class],
+    entities = [UserItemDbModel::class, WaterItemDbModel::class],
     version = 1,
     exportSchema = false
 )
@@ -26,7 +26,7 @@ abstract class WBDataBase : RoomDatabase() {
             INSTANCE?.let {
                 return it
             }
-            synchronized(LOCK){
+            synchronized(LOCK) {
                 INSTANCE?.let {
                     return it
                 }

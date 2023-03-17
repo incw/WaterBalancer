@@ -22,18 +22,19 @@ class ContainerFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
 
-        _binding = FragmentContainerBinding.inflate(layoutInflater,container,false)
+        _binding = FragmentContainerBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val bottomNavigationView = view.findViewById<BottomNavigationView>(R.id.bottom_bar)
-        val navController = (childFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment )
-            .navController
-        NavigationUI.setupWithNavController(bottomNavigationView,navController)
+        val navController =
+            (childFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
+                .navController
+        NavigationUI.setupWithNavController(bottomNavigationView, navController)
     }
 
     override fun onDestroyView() {
