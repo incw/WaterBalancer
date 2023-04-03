@@ -16,8 +16,8 @@
         android:label="fragment_choose_water"
         tools:layout="@layout/fragment_choose_water" />
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="ru.smolyakoff.waterbalance.presentation.SettingsFragment"
+        android:id="@+id/notificationsFragment"
+        android:name="ru.smolyakoff.waterbalance.presentation.NotificationsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -1,6 +1,5 @@
 package ru.smolyakoff.waterbalance.presentation
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,39 +7,32 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ru.smolyakoff.waterbalance.R
-import ru.smolyakoff.waterbalance.databinding.FragmentChooseWaterBinding
-import ru.smolyakoff.waterbalance.domain.user.UserItem
+import ru.smolyakoff.waterbalance.databinding.FragmentNotificationsBinding
 
-
-class ChooseWaterFragment : Fragment() {
-
+class NotificationsFragment : Fragment() {
 
     private lateinit var viewModel: DataViewModel
 
-    private var userItemId = UserItem.USER_ID
-
-    private var _binding: FragmentChooseWaterBinding? = null
-    private val binding: FragmentChooseWaterBinding
-        get() = _binding ?: throw RuntimeException("FragmentChooseWaterBinding is null")
+    private var _binding: FragmentNotificationsBinding? = null
+    private val binding: FragmentNotificationsBinding
+        get() = _binding ?: throw RuntimeException("FragmentSettingsBinding")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentChooseWaterBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentNotificationsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         viewModel = ViewModelProvider(this)[DataViewModel::class.java]
-        super.onViewCreated(view, savedInstanceState)
 
-        setColorFloatingButton()
+        super.onViewCreated(view, savedInstanceState)
         getUserInfo()
         calculateWater()
-
     }
+
 
     private fun getUserInfo() {
 
@@ -70,6 +62,7 @@ class ChooseWaterFragment : Fragment() {
         }
 
     }
+
     private fun calculateWater() {
         viewModel.userList.observe(viewLifecycleOwner) {
 
@@ -80,10 +73,6 @@ class ChooseWaterFragment : Fragment() {
                 )
             }
         }
-    }
-
-    private fun setColorFloatingButton(){
-        binding.buttonAddDrinkItem.setColorFilter(Color.argb(255, 255, 255, 255))
     }
 
     override fun onDestroyView() {

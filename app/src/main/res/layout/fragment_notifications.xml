@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_200"
-    tools:context=".presentation.HistoryFragment">
+    tools:context=".presentation.NotificationsFragment">
 
     <LinearLayout
         android:id="@+id/ll_choose_water"
@@ -25,7 +26,7 @@
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="normal"
-            tools:text="name" />
+            tools:text="$name" />
 
         <TextView
             android:id="@+id/tv_heightUser"
@@ -35,7 +36,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal"
-            tools:text="height" />
+            tools:text="$height" />
 
         <TextView
             android:id="@+id/tv_weightUser"
@@ -46,7 +47,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal"
-            tools:text="weight" />
+            tools:text="$weight" />
 
         <TextView
             android:id="@+id/normal_water_of_way"
@@ -56,7 +57,7 @@
             android:textColor="@color/white"
             android:textStyle="normal"
             android:textSize="20sp"
-            tools:text="text" />
+            tools:text="$text" />
 
     </LinearLayout>
 
@@ -69,16 +70,40 @@
         android:foregroundGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="History" />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_water"
+                app:switchPadding="10dp"
+                android:textColor="@color/teal_100"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_100"
+                android:text="@string/night_mode"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:paddingTop="10dp"
+                />
+
+        </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
